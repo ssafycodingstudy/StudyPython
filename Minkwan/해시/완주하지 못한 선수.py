@@ -21,7 +21,7 @@ def solution(participant, completion):
     return answer  # 위의 if answer == ""를 쓰지 않을거라면 for안의 if문에서 answer을 반환하거나 해당 안할시 여기서 participant[-1]을 바로 반환시키기(유진님 방법)
 
 
-
+"""함수 잘 돌아가는지 확인용"""
 participant1 = ["leo","kiki","eden"]
 completion1 = ["eden","kiki"]
 
