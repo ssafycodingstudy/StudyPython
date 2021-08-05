@@ -16,12 +16,13 @@ def solution(genres, plays):
             sp_dic[genres[i]] += plays[i]
 
     s_sp_dic = sorted(sp_dic, key=lambda x: x[1], reverse=True)  # sp_dic에서 x[1], 즉 플레이수 총합을 기준으로 내림차순 정렬
-    # print(s_sp_dic)
-    # print(d_genres)
+    print(s_sp_dic)
+    print(d_genres)
 
     for i in s_sp_dic:
         play = d_genres[i]
         play = sorted(play, key=lambda x: (-x[0], x[1]))  # play에서 첫번째 인자(x[0],플레이수)는 내림차순 정렬후 두번째 인자(x[1],고유번호)는 오름차순
+        print(play)
         for j in range(len(play)):
             if j == 2:
                 break

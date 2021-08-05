@@ -6,14 +6,13 @@ def solution(scoville, K):
     # 접근 2 : heapq모듈을 사용해서 같은 방식으로 진행. 효율성 개박살
     # 접근 3 : 효균님것과 비교햇을때 비슷한 방식으로 한거같은데 왜 박살이낫을까? 코드 확인날 이야기해보자
     answer = 0
-    mix = 0
     heapq.heapify(scoville)  # 스코빌지수 배열을 heap으로 만들어줌
 
     while scoville[0] < K:
-        mix += heapq.heappop(scoville) + heapq.heappop(scoville)**2
+        mix = heapq.heappop(scoville) + heapq.heappop(scoville)*2
         heapq.heappush(scoville, mix)
         answer += 1
-        if len(scoville) == 0 and scoville[0] < K:
+        if len(scoville) == 1 and scoville[0] < K:
             answer = -1
             break
 
