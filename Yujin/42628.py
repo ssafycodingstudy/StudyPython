@@ -13,7 +13,7 @@ def solution(operations):
         elif n == 'D': # 삭제할때
             if heap: # heap에 원소가 있는지 없는지
                 if m == 1:
-                    heap.pop(-1)
+                    heap.remove(max(heap))
                 elif m == -1:
                     heap.pop(0)
 
