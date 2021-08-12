@@ -5,6 +5,8 @@ input = sys.stdin.readline
 
 def DFS(idx, p):
     parent[idx] = p
+    if len(arr[idx]) == 0:
+        return
     for i in arr[idx]: # 자식 노드에 대해서만 반복
         if parent[i] == 0:
             DFS(i, idx)
