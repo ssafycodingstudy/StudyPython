@@ -1,9 +1,7 @@
 import itertools
 def solution(numbers):
     arr = []
-    arr2 = []
     prime = set()
-    num = ""
     for i in range(len(numbers)):
         arr.append(numbers[i])
     for i in range(1, len(arr) + 1):
