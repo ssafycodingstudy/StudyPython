@@ -11,7 +11,7 @@ b = []
 ans = []
 
 for i in a:
-    if i not in b:
+    if i not in b:  # 딥카피로하면 간단쓰
         b.append(i)
 
 b.sort()
