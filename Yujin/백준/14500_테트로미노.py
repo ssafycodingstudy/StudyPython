@@ -1,6 +1,7 @@
 d = [(-1, 0), (0, 1), (1, 0), (0, -1)]
 dd = [[(0, -1), (-1, 0), (0, 1)], [(0, -1), (1, 0), (0, 1)], [(-1, 0), (0, 1), (1, 0)], [(-1, 0), (0, -1), (1, 0)]]
 
+# 산모양 테트로미노일 경우
 def notdfs(r, c):
     global result
     for dir in dd:
@@ -14,6 +15,7 @@ def notdfs(r, c):
                 break
         result = max(result, total)
 
+# 그외 테트로미노일 경우
 def dfs(r, c, total, visited):
     global result
     if len(visited) == 4:
@@ -32,10 +34,9 @@ N, M = map(int, input().split())
 matrix = [list(map(int, input().split())) for _ in range(N)]
 result = 0
 
+# 처음부터 하나씩 시도해봄
 for r in range(N):
     for c in range(M):
         dfs(r, c, matrix[r][c], [(r, c)])
         notdfs(r, c)
 print(result)
-
-
