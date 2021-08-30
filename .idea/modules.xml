@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://D:/Github/Algo_study/.idea/Algo_study.iml" filepath="D:/Github/Algo_study/.idea/Algo_study.iml" />
+      <module fileurl="file://D:/Github/Java/.idea/Java.iml" filepath="D:/Github/Java/.idea/Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/StudyPython.iml" filepath="$PROJECT_DIR$/.idea/StudyPython.iml" />
+      <module fileurl="file://D:/Github/python_practice/.idea/python_practice.iml" filepath="D:/Github/python_practice/.idea/python_practice.iml" />
     </modules>
   </component>
 </project>
