@@ -1,17 +1,20 @@
 import sys
-sys.setrecursionlimit(2000)
 input = sys.stdin.readline
 
 dr = [-1, -1, -1, 1, 1, 1, 0, 0]
 dc = [-1, 1, 0, -1, 1, 0, -1, 1]
 
-def dfs(r, c):
+def bfs(r, c):
+    q = [[r, c]]
     Map[r][c] = 0
-    for i in range(8):
-        nr = r + dr[i]
-        nc = c + dc[i]
-        if 0 <= nr < h and 0 <= nc < w and Map[nr][nc] == 1:
-            dfs(nr, nc)
+    while q:
+        r, c = q.pop(0)
+        for i in range(8):
+            nr = r + dr[i]
+            nc = c + dc[i]
+            if 0 <= nr < h and 0 <= nc < w and Map[nr][nc] == 1:
+                q.append([nr, nc])
+                Map[nr][nc] = 0
 
 while True:
     w, h = map(int, input().split())
@@ -24,7 +27,6 @@ while True:
     for i in range(h):
         for j in range(w):
             if Map[i][j] == 1:
-                dfs(i, j)
+                bfs(i, j)
                 cnt += 1
     print(cnt)
-
