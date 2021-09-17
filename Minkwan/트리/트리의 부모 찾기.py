@@ -1,6 +1,6 @@
 # 트리의 부모 찾기 : https://www.acmicpc.net/problem/11725
 
-# 1을 루트로해서 bf를 쓰기 <- 아직 bfs 쓰는법이 익숙하지가 않아서 찾아봐서함..
+# 1을 루트로해서 bf를 쓰기 <- 아직 BFS DFS 쓰는법이 익숙하지가 않아서 찾아봐서함..
 
 n = int(input())
 tree = [[]for i in range(n+1)]
