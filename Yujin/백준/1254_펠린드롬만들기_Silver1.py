@@ -13,3 +13,10 @@ for i in range(len(S)):
 dp.reverse()
 S = S + dp # 주어진 문자열에 펠린드롬 아닌 부분을 더함
 print(len(S))
+
+# 더 간단한 방법 72ms
+S = input()
+for i in range(len(S)):
+    if S[i:] == S[i:][::-1]:
+        print(len(S)+i)
+        break
