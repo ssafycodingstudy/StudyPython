@@ -11,7 +11,7 @@ def bfs(r, c):
     for k in range(4):
         nr = r + dr[k]
         nc = c + dc[k]
-        if 0 > nr or nr >= R or 0 > nc or nc >= C or pan[nr][nc] == 'O': continue
+        if 0 > nr or nr >= R or 0 > nc or nc >= C or pan[nr][nc] == 'O': continuㅇe
         pan[nr][nc] = '.'
 
 
